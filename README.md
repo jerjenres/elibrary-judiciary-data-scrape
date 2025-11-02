@@ -30,7 +30,7 @@ A Python-based web scraping tool designed to extract and organize legal case dat
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/elibrary-judiciary-data-scrape.git
-   cd data-scrape
+   cd elibrary-judiciary-data-scrape
    ```
 
 2. Install required dependencies:
