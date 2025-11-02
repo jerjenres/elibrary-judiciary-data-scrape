@@ -11,6 +11,8 @@ A Python-based web scraping tool designed to extract and organize legal case dat
 2. Paste the case URLs in `links.txt`
 3. Extract data: `python main.py` (enter Excel filename - creates/appends to excel_files/ directory)
 
+$\color{orange}{\textsf{\textbf{Remember to close the specified excel file to avoid errors.}}}$
+
 ## Features
 
 - **Web Scraping**: Automates extraction of case URLs from the Philippine Judiciary eLibrary pages
@@ -29,8 +31,8 @@ A Python-based web scraping tool designed to extract and organize legal case dat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/data-scrape.git
-   cd data-scrape
+   git clone https://github.com/yourusername/elibrary-judiciary-data-scrape.git
+   cd elibrary-judiciary-data-scrape
    ```
 
 2. Install required dependencies:
@@ -60,24 +62,15 @@ Follow the prompts to enter the URL of the eLibrary page containing case links. 
 Example link of the month and year - https://elibrary.judiciary.gov.ph/thebookshelf/docmonth/May/2021/1
 
 The extracted URLs will be displayed on stdout.
-
+```
 https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67421
 https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67425
 https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67440
 ...
- 
+ ```
+
 Copy and save them to `links.txt` (one URL per line).
 
-No need to do this to scrape the case links:
-Alternatively, customize the scraping behavior.
-- `--all`: Extract all links from the page
-- `--filter REGEX`: Apply a custom regex filter for specific link patterns
-- `--timeout SECONDS`: Set request timeout (default: 15 seconds)
-
-Example:
-```bash
-python link_scraper.py --filter "\.pdf$"
-```
 
 ### Step 2: Extract Case Data
 
@@ -95,6 +88,8 @@ When prompted, enter the Excel filename (without the `.xlsx` extension). Note: I
 - Fetch and parse each case page
 - Extract structured data using Gemini AI
 - Save/append results to the specified Excel file in the `excel_files/` directory
+
+$\color{orange}{\textsf{\textbf{Remember to close the specified excel file to avoid errors.}}}$
 
 ## Example Output
 
@@ -124,6 +119,7 @@ The tool includes comprehensive error handling for:
 - Malformed JSON responses (with repair attempts)
 - Missing or invalid data fields
 - Empty model responses: Typically indicate that the case content is sensitive or violates AI content policies - these cases will be skipped and not processed
+- During data extraction, you may see warnings like "Warning: there are non-text parts in the response: ['thought_signature'], returning concatenated text result from text parts." These are normal and indicate the AI response includes internal metadata alongside the text. The code handles this correctly, and extraction will proceed successfully.
 
 Debug files (debug_empty_response_*.txt) are created for problematic pages, including those with empty responses, to aid troubleshooting.
 
