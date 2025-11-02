@@ -70,16 +70,6 @@ https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67440
  
 Copy and save them to `links.txt` (one URL per line).
 
-No need to do this to scrape the case links:
-Alternatively, customize the scraping behavior.
-- `--all`: Extract all links from the page
-- `--filter REGEX`: Apply a custom regex filter for specific link patterns
-- `--timeout SECONDS`: Set request timeout (default: 15 seconds)
-
-Example:
-```bash
-python link_scraper.py --filter "\.pdf$"
-```
 
 ### Step 2: Extract Case Data
 
