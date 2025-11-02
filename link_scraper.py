@@ -130,6 +130,7 @@ Examples:
         filter_pattern = None
 
     # Prompt for URL instead of taking as argument
+    print('\nEnter the link to scrape the case URLs from the specific year and month like this "https://elibrary.judiciary.gov.ph/thebookshelf/docmonth/May/2021/1"\n')
     url = input("Enter URL to scrape: ").strip()
 
     if not url:

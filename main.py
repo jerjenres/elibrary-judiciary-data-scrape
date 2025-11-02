@@ -91,12 +91,22 @@ def generate_and_append_to_excel():
         return
 
     # 2. Define the output filename and expected columns
-    print("Note: If the excel file does not exist, it will be created. If it exists, new data will be appended to it.")
+    print("\nNote: If the excel file does not exist, it will be created. If it exists, new data will be appended to it.\n")
+    print("Be sure to close the specified excel file (if exist) before proceeding.\n")
     filename_input = input("Enter Excel filename (without .xlsx, example 'march_data' or 'april'): ").strip()
     EXCEL_FILENAME = os.path.join("excel_files", filename_input + ".xlsx")
 
     expected_columns = ["Case Number", "Case Title", "Facts", "Decision", "Ruling", "Verdict"]
-    
+
+    # Check if existing file is writable (open in another app)
+    if os.path.exists(EXCEL_FILENAME):
+        try:
+            with open(EXCEL_FILENAME, 'a'):
+                pass
+        except PermissionError:
+            print(f"Error: The file '{EXCEL_FILENAME}' is currently open in another application. Please close it before proceeding.")
+            return
+
     # 3. Model and API Client setup
     MODEL = "gemini-flash-latest" # Use a fast model for this task
     
