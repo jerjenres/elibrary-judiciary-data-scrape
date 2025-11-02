@@ -31,7 +31,7 @@ $\color{orange}{\textsf{\textbf{Remember to close the specified excel file to av
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/elibrary-judiciary-data-scrape.git
+   git clone https://github.com/jerjenres/elibrary-judiciary-data-scrape.git
    cd elibrary-judiciary-data-scrape
    ```
 
