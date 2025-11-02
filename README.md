@@ -31,7 +31,7 @@ $\color{orange}{\textsf{\textbf{Remember to close the specified excel file to av
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/elibrary-judiciary-data-scrape.git
+   git clone https://github.com/jerjenres/elibrary-judiciary-data-scrape.git
    cd elibrary-judiciary-data-scrape
    ```
 
@@ -82,7 +82,9 @@ Open another terminal and run the main extraction script:
 python main.py
 ```
 
-When prompted, enter the Excel filename (without the `.xlsx` extension). Note: If the file does not exist, it will be created. If it exists, new data will be appended to it. The script will:
+When prompted, enter the Excel filename (without the `.xlsx` extension). 
+
+**Note: If the file does not exist, it will be created. If it exists, new data will be appended to it. The script will:**
 
 - Load URLs from `links.txt`
 - Fetch and parse each case page
