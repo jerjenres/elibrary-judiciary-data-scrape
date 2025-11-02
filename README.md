@@ -82,7 +82,9 @@ Open another terminal and run the main extraction script:
 python main.py
 ```
 
-When prompted, enter the Excel filename (without the `.xlsx` extension). Note: If the file does not exist, it will be created. If it exists, new data will be appended to it. The script will:
+When prompted, enter the Excel filename (without the `.xlsx` extension). 
+
+**Note: If the file does not exist, it will be created. If it exists, new data will be appended to it. The script will:**
 
 - Load URLs from `links.txt`
 - Fetch and parse each case page
