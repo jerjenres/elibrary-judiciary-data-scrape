@@ -11,8 +11,6 @@ A Python-based web scraping tool designed to extract and organize legal case dat
 2. Paste the case URLs in `links.txt`
 3. Extract data: `python main.py` (enter Excel filename - creates/appends to excel_files/ directory)
 
-$\color{orange}{\textsf{\textbf{Remember to close the specified excel file to avoid errors.}}}$
-
 ## Features
 
 - **Web Scraping**: Automates extraction of case URLs from the Philippine Judiciary eLibrary pages
