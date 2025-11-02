@@ -45,7 +45,7 @@ $\color{orange}{\textsf{\textbf{Remember to close the specified excel file to av
    GEMINI_API_KEY="your_api_key_here"
    ```
 
-4. Create a text file `links.txt`
+4. Create a text file in project root `links.txt`
 
 ## Usage
 
