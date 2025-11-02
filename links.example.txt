@@ -1,0 +1,9 @@
+# Create a txt file named "links.txt"
+# Add case URLs there, one per line
+# Run python link_scraper.py to get URLs, then copy and paste them to "links.txt"
+# Example:
+
+# https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67774
+# https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67775
+# https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67826
+# https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/1/67929
